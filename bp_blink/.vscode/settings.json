@@ -1,3 +1,10 @@
 {    
-    "cortex-debug.gdbPath": "gdb-multiarch" 
+    "cortex-debug.gdbPath": "gdb-multiarch",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/lth/src/stm32/bp_blink/build",
+            "binaryPath": "/home/lth/src/stm32/bp_blink/build/bp_blink.elf",
+            "binaryArgs": []
+        }
+    ]
 }
