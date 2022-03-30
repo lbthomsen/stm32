@@ -80,7 +80,8 @@ int _write(int fd, char* ptr, int len) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+   //for (uint32_t i = 0; i < 1000000; ++i) asm("NOP"); // Insane
+   //asm("NOP");
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/

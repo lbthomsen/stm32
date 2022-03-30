@@ -11,16 +11,16 @@
             "request": "launch",
             "type": "cortex-debug",
             "device": "STM32F411CEU6",
-            "runToEntryPoint": "main",
-            "showDevDebugOutput": "parsed",
-            "servertype": "stutil"
+            "showDevDebugOutput": "none",
+            "servertype": "stutil", 
+            "v1": false
         }, 
         {
             "type": "cortex-debug",
             "request": "launch",
             "name": "Debug (OpenOCD)",
             "servertype": "openocd",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceFolder}",
             "runToEntryPoint": "main",
             "executable": "./build/bp_blink.elf",
             "device": "STM32F411CEU6",
@@ -28,7 +28,7 @@
                 "interface/stlink.cfg",
                 "target/stm32f4x.cfg"
             ], 
-            "showDevDebugOutput": "parsed",
+            "showDevDebugOutput": "none",
         }, 
         {
             "name": "BMP attach",

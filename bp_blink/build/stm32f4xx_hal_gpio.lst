@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZZ89G2.s 			page 1
+ARM GAS  /tmp/ccZlVaaO.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
   19:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   20:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
   21:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   ******************************************************************************
-ARM GAS  /tmp/ccZZ89G2.s 			page 2
+ARM GAS  /tmp/ccZlVaaO.s 			page 2
 
 
   22:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   @verbatim
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
   76:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              GPIO_InitTypeDef structure select the type (interrupt or event) and 
   77:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****              the corresponding trigger event (rising or falling or both).
   78:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
-ARM GAS  /tmp/ccZZ89G2.s 			page 3
+ARM GAS  /tmp/ccZlVaaO.s 			page 3
 
 
   79:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) In case of external interrupt/event mode selection, configure NVIC IRQ priority 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  133:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private function prototypes -----------------------------------------------*/
  134:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Private functions ---------------------------------------------------------*/
  135:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /* Exported functions --------------------------------------------------------*/
-ARM GAS  /tmp/ccZZ89G2.s 			page 4
+ARM GAS  /tmp/ccZlVaaO.s 			page 4
 
 
  136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /** @defgroup GPIO_Exported_Functions GPIO Exported Functions
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
   55 000e 0023     		movs	r3, #0
   56 0010 3B61     		str	r3, [r7, #16]
  169:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   uint32_t temp = 0x00U;
-ARM GAS  /tmp/ccZZ89G2.s 			page 5
+ARM GAS  /tmp/ccZlVaaO.s 			page 5
 
 
   57              		.loc 1 169 12
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  107 0062 03D0     		beq	.L4
  108              	.L3:
  109              		.loc 1 173 3 discriminator 3
-ARM GAS  /tmp/ccZZ89G2.s 			page 6
+ARM GAS  /tmp/ccZlVaaO.s 			page 6
 
 
  110 0064 AD21     		movs	r1, #173
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  163 00c4 0CD0     		beq	.L5
  164              		.loc 1 174 3 discriminator 10
  165 00c6 3B68     		ldr	r3, [r7]
-ARM GAS  /tmp/ccZZ89G2.s 			page 7
+ARM GAS  /tmp/ccZlVaaO.s 			page 7
 
 
  166 00c8 5B68     		ldr	r3, [r3, #4]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  210 011c 9A42     		cmp	r2, r3
  211 011e 40F0EC81 		bne	.L7
  185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
-ARM GAS  /tmp/ccZZ89G2.s 			page 8
+ARM GAS  /tmp/ccZlVaaO.s 			page 8
 
 
  186:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /*--------------------- GPIO Mode Configuration ------------------------*/
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  256 0164 9B68     		ldr	r3, [r3, #8]
  257 0166 BB61     		str	r3, [r7, #24]
  195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));
-ARM GAS  /tmp/ccZZ89G2.s 			page 9
+ARM GAS  /tmp/ccZlVaaO.s 			page 9
 
 
  258              		.loc 1 195 55
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  305 01ae 03F00102 		and	r2, r3, #1
  306              		.loc 1 202 71
  307 01b2 FB69     		ldr	r3, [r7, #28]
-ARM GAS  /tmp/ccZZ89G2.s 			page 10
+ARM GAS  /tmp/ccZlVaaO.s 			page 10
 
 
  308 01b4 02FA03F3 		lsl	r3, r2, r3
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  351 01f6 FB69     		ldr	r3, [r7, #28]
  352 01f8 5B00     		lsls	r3, r3, #1
  353              		.loc 1 213 37
-ARM GAS  /tmp/ccZZ89G2.s 			page 11
+ARM GAS  /tmp/ccZlVaaO.s 			page 11
 
 
  354 01fa 0322     		movs	r2, #3
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  399 0240 1B69     		ldr	r3, [r3, #16]
  400 0242 002B     		cmp	r3, #0
  401 0244 6FD0     		beq	.L14
-ARM GAS  /tmp/ccZZ89G2.s 			page 12
+ARM GAS  /tmp/ccZlVaaO.s 			page 12
 
 
  402              		.loc 1 222 9 discriminator 3
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  456 029c 43D0     		beq	.L14
  457              		.loc 1 222 9 discriminator 14
  458 029e 3B68     		ldr	r3, [r7]
-ARM GAS  /tmp/ccZZ89G2.s 			page 13
+ARM GAS  /tmp/ccZlVaaO.s 			page 13
 
 
  459 02a0 1B69     		ldr	r3, [r3, #16]
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  513 02f6 3B68     		ldr	r3, [r7]
  514 02f8 1B69     		ldr	r3, [r3, #16]
  515 02fa 0A2B     		cmp	r3, #10
-ARM GAS  /tmp/ccZZ89G2.s 			page 14
+ARM GAS  /tmp/ccZlVaaO.s 			page 14
 
 
  516 02fc 13D0     		beq	.L14
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  566 034c 1A69     		ldr	r2, [r3, #16]
  567              		.loc 1 226 75
  568 034e FB69     		ldr	r3, [r7, #28]
-ARM GAS  /tmp/ccZZ89G2.s 			page 15
+ARM GAS  /tmp/ccZlVaaO.s 			page 15
 
 
  569 0350 03F00703 		and	r3, r3, #7
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  616 0396 5B00     		lsls	r3, r3, #1
  617              		.loc 1 233 46
  618 0398 02FA03F3 		lsl	r3, r2, r3
-ARM GAS  /tmp/ccZZ89G2.s 			page 16
+ARM GAS  /tmp/ccZlVaaO.s 			page 16
 
 
  619              		.loc 1 233 12
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  662              		.loc 1 244 32
  663 03e6 9B00     		lsls	r3, r3, #2
  664              		.loc 1 244 25
-ARM GAS  /tmp/ccZZ89G2.s 			page 17
+ARM GAS  /tmp/ccZlVaaO.s 			page 17
 
 
  665 03e8 0F22     		movs	r2, #15
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  718              		.loc 1 245 18 is_stmt 1 discriminator 2
  719 0432 0023     		movs	r3, #0
  720              	.L24:
-ARM GAS  /tmp/ccZZ89G2.s 			page 18
+ARM GAS  /tmp/ccZlVaaO.s 			page 18
 
 
  721              		.loc 1 245 71 discriminator 20
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         }
  255:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         EXTI->RTSR = temp;
  767              		.loc 1 255 13
-ARM GAS  /tmp/ccZZ89G2.s 			page 19
+ARM GAS  /tmp/ccZlVaaO.s 			page 19
 
 
  768 0476 2E4A     		ldr	r2, .L35+28
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  811              		.loc 1 266 14
  812 04b0 BA69     		ldr	r2, [r7, #24]
  813 04b2 1340     		ands	r3, r3, r2
-ARM GAS  /tmp/ccZZ89G2.s 			page 20
+ARM GAS  /tmp/ccZlVaaO.s 			page 20
 
 
  814 04b4 BB61     		str	r3, [r7, #24]
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  856 04ee 3B69     		ldr	r3, [r7, #16]
  857 04f0 1343     		orrs	r3, r3, r2
  858 04f2 BB61     		str	r3, [r7, #24]
-ARM GAS  /tmp/ccZZ89G2.s 			page 21
+ARM GAS  /tmp/ccZlVaaO.s 			page 21
 
 
  859              	.L28:
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  906              		.fpu fpv4-sp-d16
  908              	HAL_GPIO_DeInit:
  909              	.LFB131:
-ARM GAS  /tmp/ccZZ89G2.s 			page 22
+ARM GAS  /tmp/ccZlVaaO.s 			page 22
 
 
  285:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  946              		.loc 1 302 3 discriminator 2
  947 0026 7B68     		ldr	r3, [r7, #4]
  948 0028 6F4A     		ldr	r2, .L53+8
-ARM GAS  /tmp/ccZZ89G2.s 			page 23
+ARM GAS  /tmp/ccZlVaaO.s 			page 23
 
 
  949 002a 9342     		cmp	r3, r2
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       /*------------------------- EXTI Mode Configuration --------------------*/
  315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       tmp = SYSCFG->EXTICR[position >> 2U];
  992              		.loc 1 315 19
-ARM GAS  /tmp/ccZZ89G2.s 			page 24
+ARM GAS  /tmp/ccZlVaaO.s 			page 24
 
 
  993 0072 624A     		ldr	r2, .L53+28
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1045              	.L44:
  1046              		.loc 1 317 29 discriminator 8
  1047 00c4 0323     		movs	r3, #3
-ARM GAS  /tmp/ccZZ89G2.s 			page 25
+ARM GAS  /tmp/ccZlVaaO.s 			page 25
 
 
  1048 00c6 04E0     		b	.L50
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1095              		.loc 1 324 23
  1096 0102 FB68     		ldr	r3, [r7, #12]
  1097 0104 DB43     		mvns	r3, r3
-ARM GAS  /tmp/ccZZ89G2.s 			page 26
+ARM GAS  /tmp/ccZlVaaO.s 			page 26
 
 
  1098              		.loc 1 324 20
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1142 014c 7B69     		ldr	r3, [r7, #20]
  1143 014e 5B00     		lsls	r3, r3, #1
  1144              		.loc 1 334 43
-ARM GAS  /tmp/ccZZ89G2.s 			page 27
+ARM GAS  /tmp/ccZlVaaO.s 			page 27
 
 
  1145 0150 0321     		movs	r1, #3
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  343:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       GPIOx->OTYPER  &= ~(GPIO_OTYPER_OT_0 << position) ;
  1191              		.loc 1 343 22
  1192 019e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccZZ89G2.s 			page 28
+ARM GAS  /tmp/ccZlVaaO.s 			page 28
 
 
  1193 01a0 5A68     		ldr	r2, [r3, #4]
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1239 01de 80BD     		pop	{r7, pc}
  1240              	.L54:
  1241              		.align	2
-ARM GAS  /tmp/ccZZ89G2.s 			page 29
+ARM GAS  /tmp/ccZlVaaO.s 			page 29
 
 
  1242              	.L53:
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1271              		.cfi_def_cfa_offset 8
  1272              		.cfi_offset 7, -8
  1273              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccZZ89G2.s 			page 30
+ARM GAS  /tmp/ccZlVaaO.s 			page 30
 
 
  1274 0002 84B0     		sub	sp, sp, #16
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1316              	.L59:
  389:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
  390:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   return bitstatus;
-ARM GAS  /tmp/ccZZ89G2.s 			page 31
+ARM GAS  /tmp/ccZlVaaO.s 			page 31
 
 
  1317              		.loc 1 390 10
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1352              		.cfi_def_cfa_offset 8
  1353              		.cfi_offset 7, -8
  1354              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccZZ89G2.s 			page 32
+ARM GAS  /tmp/ccZlVaaO.s 			page 32
 
 
  1355 0002 82B0     		sub	sp, sp, #8
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1402 004a 9A61     		str	r2, [r3, #24]
  419:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   }
  420:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   else
-ARM GAS  /tmp/ccZZ89G2.s 			page 33
+ARM GAS  /tmp/ccZlVaaO.s 			page 33
 
 
  421:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   {
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1442              		.cfi_startproc
  1443              		@ args = 0, pretend = 0, frame = 16
  1444              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /tmp/ccZZ89G2.s 			page 34
+ARM GAS  /tmp/ccZlVaaO.s 			page 34
 
 
  1445 0000 80B5     		push	{r7, lr}
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1489 0038 7B88     		ldrh	r3, [r7, #2]
  1490 003a 0B40     		ands	r3, r3, r1
  1491              		.loc 1 444 51
-ARM GAS  /tmp/ccZZ89G2.s 			page 35
+ARM GAS  /tmp/ccZlVaaO.s 			page 35
 
 
  1492 003c 1A43     		orrs	r2, r2, r3
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1533              	.LCFI26:
  1534              		.cfi_def_cfa_offset 24
  1535 0004 00AF     		add	r7, sp, #0
-ARM GAS  /tmp/ccZZ89G2.s 			page 36
+ARM GAS  /tmp/ccZlVaaO.s 			page 36
 
 
  1536              	.LCFI27:
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  473:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Read LCKR register. This read is mandatory to complete key lock sequence */
  474:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   tmp = GPIOx->LCKR;
  1577              		.loc 1 474 14
-ARM GAS  /tmp/ccZZ89G2.s 			page 37
+ARM GAS  /tmp/ccZlVaaO.s 			page 37
 
 
  1578 0046 7B68     		ldr	r3, [r7, #4]
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1623              	.LFB136:
  486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
  487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
-ARM GAS  /tmp/ccZZ89G2.s 			page 38
+ARM GAS  /tmp/ccZlVaaO.s 			page 38
 
 
  488:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  This function handles EXTI interrupt request.
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1665              		.cfi_def_cfa_register 13
  1666              		@ sp needed
  1667 002a 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/ccZZ89G2.s 			page 39
+ARM GAS  /tmp/ccZlVaaO.s 			page 39
 
 
  1668              	.L88:
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1710              		@ sp needed
  1711 0010 5DF8047B 		ldr	r7, [sp], #4
  1712              	.LCFI40:
-ARM GAS  /tmp/ccZZ89G2.s 			page 40
+ARM GAS  /tmp/ccZlVaaO.s 			page 40
 
 
  1713              		.cfi_restore 7
@@ -2353,39 +2353,39 @@ ARM GAS  /tmp/ccZZ89G2.s 			page 1
  1723              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  1724              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  1725              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  /tmp/ccZZ89G2.s 			page 41
+ARM GAS  /tmp/ccZlVaaO.s 			page 41
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_gpio.c
-     /tmp/ccZZ89G2.s:18     .rodata:0000000000000000 $d
-     /tmp/ccZZ89G2.s:23     .text.HAL_GPIO_Init:0000000000000000 $t
-     /tmp/ccZZ89G2.s:31     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
-     /tmp/ccZZ89G2.s:187    .text.HAL_GPIO_Init:00000000000000e8 $d
-     /tmp/ccZZ89G2.s:196    .text.HAL_GPIO_Init:0000000000000104 $t
-     /tmp/ccZZ89G2.s:590    .text.HAL_GPIO_Init:0000000000000370 $d
-     /tmp/ccZZ89G2.s:594    .text.HAL_GPIO_Init:0000000000000374 $t
-     /tmp/ccZZ89G2.s:889    .text.HAL_GPIO_Init:0000000000000514 $d
-     /tmp/ccZZ89G2.s:901    .text.HAL_GPIO_DeInit:0000000000000000 $t
-     /tmp/ccZZ89G2.s:908    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
-     /tmp/ccZZ89G2.s:1243   .text.HAL_GPIO_DeInit:00000000000001e0 $d
-     /tmp/ccZZ89G2.s:1256   .text.HAL_GPIO_ReadPin:0000000000000000 $t
-     /tmp/ccZZ89G2.s:1263   .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
-     /tmp/ccZZ89G2.s:1332   .text.HAL_GPIO_ReadPin:0000000000000048 $d
-     /tmp/ccZZ89G2.s:1337   .text.HAL_GPIO_WritePin:0000000000000000 $t
-     /tmp/ccZZ89G2.s:1344   .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
-     /tmp/ccZZ89G2.s:1427   .text.HAL_GPIO_WritePin:0000000000000060 $d
-     /tmp/ccZZ89G2.s:1432   .text.HAL_GPIO_TogglePin:0000000000000000 $t
-     /tmp/ccZZ89G2.s:1439   .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
-     /tmp/ccZZ89G2.s:1509   .text.HAL_GPIO_TogglePin:000000000000004c $d
-     /tmp/ccZZ89G2.s:1514   .text.HAL_GPIO_LockPin:0000000000000000 $t
-     /tmp/ccZZ89G2.s:1521   .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
-     /tmp/ccZZ89G2.s:1610   .text.HAL_GPIO_LockPin:0000000000000068 $d
-     /tmp/ccZZ89G2.s:1615   .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
-     /tmp/ccZZ89G2.s:1622   .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
-     /tmp/ccZZ89G2.s:1683   .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
-     /tmp/ccZZ89G2.s:1671   .text.HAL_GPIO_EXTI_IRQHandler:000000000000002c $d
-     /tmp/ccZZ89G2.s:1676   .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
+     /tmp/ccZlVaaO.s:18     .rodata:0000000000000000 $d
+     /tmp/ccZlVaaO.s:23     .text.HAL_GPIO_Init:0000000000000000 $t
+     /tmp/ccZlVaaO.s:31     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
+     /tmp/ccZlVaaO.s:187    .text.HAL_GPIO_Init:00000000000000e8 $d
+     /tmp/ccZlVaaO.s:196    .text.HAL_GPIO_Init:0000000000000104 $t
+     /tmp/ccZlVaaO.s:590    .text.HAL_GPIO_Init:0000000000000370 $d
+     /tmp/ccZlVaaO.s:594    .text.HAL_GPIO_Init:0000000000000374 $t
+     /tmp/ccZlVaaO.s:889    .text.HAL_GPIO_Init:0000000000000514 $d
+     /tmp/ccZlVaaO.s:901    .text.HAL_GPIO_DeInit:0000000000000000 $t
+     /tmp/ccZlVaaO.s:908    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
+     /tmp/ccZlVaaO.s:1243   .text.HAL_GPIO_DeInit:00000000000001e0 $d
+     /tmp/ccZlVaaO.s:1256   .text.HAL_GPIO_ReadPin:0000000000000000 $t
+     /tmp/ccZlVaaO.s:1263   .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
+     /tmp/ccZlVaaO.s:1332   .text.HAL_GPIO_ReadPin:0000000000000048 $d
+     /tmp/ccZlVaaO.s:1337   .text.HAL_GPIO_WritePin:0000000000000000 $t
+     /tmp/ccZlVaaO.s:1344   .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
+     /tmp/ccZlVaaO.s:1427   .text.HAL_GPIO_WritePin:0000000000000060 $d
+     /tmp/ccZlVaaO.s:1432   .text.HAL_GPIO_TogglePin:0000000000000000 $t
+     /tmp/ccZlVaaO.s:1439   .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
+     /tmp/ccZlVaaO.s:1509   .text.HAL_GPIO_TogglePin:000000000000004c $d
+     /tmp/ccZlVaaO.s:1514   .text.HAL_GPIO_LockPin:0000000000000000 $t
+     /tmp/ccZlVaaO.s:1521   .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
+     /tmp/ccZlVaaO.s:1610   .text.HAL_GPIO_LockPin:0000000000000068 $d
+     /tmp/ccZlVaaO.s:1615   .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
+     /tmp/ccZlVaaO.s:1622   .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
+     /tmp/ccZlVaaO.s:1683   .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
+     /tmp/ccZlVaaO.s:1671   .text.HAL_GPIO_EXTI_IRQHandler:000000000000002c $d
+     /tmp/ccZlVaaO.s:1676   .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
 
 UNDEFINED SYMBOLS
 assert_failed
