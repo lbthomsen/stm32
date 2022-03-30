@@ -10,8 +10,9 @@
             "name": "Debug with ST-Link",
             "request": "launch",
             "type": "cortex-debug",
+            "device": "STM32F411CEU6",
             "runToEntryPoint": "main",
-            "showDevDebugOutput": "none",
+            "showDevDebugOutput": "parsed",
             "servertype": "stutil"
         }, 
         {

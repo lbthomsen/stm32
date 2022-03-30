@@ -104,8 +104,6 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_Delay(3000);
-
   DBG("Peripherals Initialised - starting...");
 
   /* USER CODE END 2 */
@@ -120,7 +118,7 @@ int main(void)
 
     now = HAL_GetTick();
 
-    if (now - last_blink >= 499) {
+    if (now - last_blink >= 500) {
 
       HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
