@@ -10,6 +10,7 @@
             "name": "Debug with ST-Link",
             "request": "launch",
             "type": "cortex-debug",
+            "runToEntryPoint": "main",
             "device": "STM32F411CEU6",
             "showDevDebugOutput": "none",
             "servertype": "stutil", 
@@ -25,7 +26,7 @@
             "executable": "./build/bp_blink.elf",
             "device": "STM32F411CEU6",
             "configFiles": [
-                "interface/stlink.cfg",
+                "interface/stlink-dap.cfg",
                 "target/stm32f4x.cfg"
             ], 
             "showDevDebugOutput": "none",
