@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc5ulQpP.s 			page 1
+ARM GAS  /tmp/cclelYY6.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -10,7 +10,7 @@ ARM GAS  /tmp/cc5ulQpP.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 30, 1
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"stm32f4xx_hal_flash_ramfunc.c"
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc5ulQpP.s 			page 1
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     *** GNU Compiler ***
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     --------------------
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain attribute
-ARM GAS  /tmp/cc5ulQpP.s 			page 2
+ARM GAS  /tmp/cclelYY6.s 			page 2
 
 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****          "__attribute__((section(".RamFunc")))".
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc5ulQpP.s 			page 1
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
-ARM GAS  /tmp/cc5ulQpP.s 			page 3
+ARM GAS  /tmp/cclelYY6.s 			page 3
 
 
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Stop the flash interface while System Run
@@ -129,83 +129,69 @@ ARM GAS  /tmp/cc5ulQpP.s 			page 1
   93:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
   94:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_StopFlashInterfaceClk(void)
   95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
-  29              		.loc 1 95 1
+  29              		.loc 1 95 1 view -0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 8
-  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
   33              		@ link register save eliminated.
-  34 0000 80B4     		push	{r7}
+  34 0000 82B0     		sub	sp, sp, #8
   35              	.LCFI0:
-  36              		.cfi_def_cfa_offset 4
-  37              		.cfi_offset 7, -4
-  38 0002 83B0     		sub	sp, sp, #12
-  39              	.LCFI1:
-  40              		.cfi_def_cfa_offset 16
-  41 0004 00AF     		add	r7, sp, #0
-  42              	.LCFI2:
-  43              		.cfi_def_cfa_register 7
-  44              	.LBB2:
+  36              		.cfi_def_cfa_offset 8
   96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
   97:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
-  45              		.loc 1 97 3
-  46 0006 0023     		movs	r3, #0
-  47 0008 7B60     		str	r3, [r7, #4]
-  48 000a 0C4B     		ldr	r3, .L3
-  49 000c 1B6C     		ldr	r3, [r3, #64]
-  50 000e 0B4A     		ldr	r2, .L3
-  51 0010 43F08053 		orr	r3, r3, #268435456
-  52 0014 1364     		str	r3, [r2, #64]
-  53 0016 094B     		ldr	r3, .L3
-  54 0018 1B6C     		ldr	r3, [r3, #64]
-  55 001a 03F08053 		and	r3, r3, #268435456
-  56 001e 7B60     		str	r3, [r7, #4]
-  57 0020 7B68     		ldr	r3, [r7, #4]
-  58              	.LBE2:
+  37              		.loc 1 97 3 view .LVU1
+  38              	.LBB2:
+  39              		.loc 1 97 3 view .LVU2
+  40 0002 0020     		movs	r0, #0
+  41 0004 0190     		str	r0, [sp, #4]
+  42              		.loc 1 97 3 view .LVU3
+  43 0006 084B     		ldr	r3, .L3
+  44 0008 1A6C     		ldr	r2, [r3, #64]
+  45 000a 42F08052 		orr	r2, r2, #268435456
+  46 000e 1A64     		str	r2, [r3, #64]
+  47              		.loc 1 97 3 view .LVU4
+  48 0010 1B6C     		ldr	r3, [r3, #64]
+  49 0012 03F08053 		and	r3, r3, #268435456
+  50 0016 0193     		str	r3, [sp, #4]
+  51              		.loc 1 97 3 view .LVU5
+  52 0018 019B     		ldr	r3, [sp, #4]
+  53              	.LBE2:
+  54              		.loc 1 97 3 view .LVU6
   98:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Stop the flash interface while System Run */  
   99:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   SET_BIT(PWR->CR, PWR_CR_FISSR);
-  59              		.loc 1 99 3
-  60 0022 074B     		ldr	r3, .L3+4
-  61 0024 1B68     		ldr	r3, [r3]
-  62 0026 064A     		ldr	r2, .L3+4
-  63 0028 43F40013 		orr	r3, r3, #2097152
-  64 002c 1360     		str	r3, [r2]
+  55              		.loc 1 99 3 view .LVU7
+  56 001a 044A     		ldr	r2, .L3+4
+  57 001c 1368     		ldr	r3, [r2]
+  58 001e 43F40013 		orr	r3, r3, #2097152
+  59 0022 1360     		str	r3, [r2]
  100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****    
  101:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
-  65              		.loc 1 101 10
-  66 002e 0023     		movs	r3, #0
+  60              		.loc 1 101 3 view .LVU8
  102:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
-  67              		.loc 1 102 1
-  68 0030 1846     		mov	r0, r3
-  69 0032 0C37     		adds	r7, r7, #12
-  70              	.LCFI3:
-ARM GAS  /tmp/cc5ulQpP.s 			page 4
+  61              		.loc 1 102 1 is_stmt 0 view .LVU9
+  62 0024 02B0     		add	sp, sp, #8
+  63              	.LCFI1:
+  64              		.cfi_def_cfa_offset 0
+  65              		@ sp needed
+  66 0026 7047     		bx	lr
+  67              	.L4:
+  68              		.align	2
+  69              	.L3:
+  70 0028 00380240 		.word	1073887232
+ARM GAS  /tmp/cclelYY6.s 			page 4
 
 
-  71              		.cfi_def_cfa_offset 4
-  72 0034 BD46     		mov	sp, r7
-  73              	.LCFI4:
-  74              		.cfi_def_cfa_register 13
-  75              		@ sp needed
-  76 0036 5DF8047B 		ldr	r7, [sp], #4
-  77              	.LCFI5:
-  78              		.cfi_restore 7
-  79              		.cfi_def_cfa_offset 0
-  80 003a 7047     		bx	lr
-  81              	.L4:
-  82              		.align	2
-  83              	.L3:
-  84 003c 00380240 		.word	1073887232
-  85 0040 00700040 		.word	1073770496
-  86              		.cfi_endproc
-  87              	.LFE130:
-  89              		.align	1
-  90              		.global	HAL_FLASHEx_StartFlashInterfaceClk
-  91              		.syntax unified
-  92              		.thumb
-  93              		.thumb_func
-  94              		.fpu fpv4-sp-d16
-  96              	HAL_FLASHEx_StartFlashInterfaceClk:
-  97              	.LFB131:
+  71 002c 00700040 		.word	1073770496
+  72              		.cfi_endproc
+  73              	.LFE130:
+  75              		.align	1
+  76              		.global	HAL_FLASHEx_StartFlashInterfaceClk
+  77              		.syntax unified
+  78              		.thumb
+  79              		.thumb_func
+  80              		.fpu fpv4-sp-d16
+  82              	HAL_FLASHEx_StartFlashInterfaceClk:
+  83              	.LFB131:
  103:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
  104:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
  105:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Start the flash interface while System Run
@@ -216,173 +202,142 @@ ARM GAS  /tmp/cc5ulQpP.s 			page 1
  110:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
  111:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_StartFlashInterfaceClk(void)
  112:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
-  98              		.loc 1 112 1
-  99              		.cfi_startproc
- 100              		@ args = 0, pretend = 0, frame = 8
- 101              		@ frame_needed = 1, uses_anonymous_args = 0
- 102              		@ link register save eliminated.
- 103 0044 80B4     		push	{r7}
- 104              	.LCFI6:
- 105              		.cfi_def_cfa_offset 4
- 106              		.cfi_offset 7, -4
- 107 0046 83B0     		sub	sp, sp, #12
- 108              	.LCFI7:
- 109              		.cfi_def_cfa_offset 16
- 110 0048 00AF     		add	r7, sp, #0
- 111              	.LCFI8:
- 112              		.cfi_def_cfa_register 7
- 113              	.LBB3:
+  84              		.loc 1 112 1 is_stmt 1 view -0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 8
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  89 0030 82B0     		sub	sp, sp, #8
+  90              	.LCFI2:
+  91              		.cfi_def_cfa_offset 8
  113:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
  114:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
- 114              		.loc 1 114 3
- 115 004a 0023     		movs	r3, #0
- 116 004c 7B60     		str	r3, [r7, #4]
- 117 004e 0C4B     		ldr	r3, .L7
-ARM GAS  /tmp/cc5ulQpP.s 			page 5
-
-
- 118 0050 1B6C     		ldr	r3, [r3, #64]
- 119 0052 0B4A     		ldr	r2, .L7
- 120 0054 43F08053 		orr	r3, r3, #268435456
- 121 0058 1364     		str	r3, [r2, #64]
- 122 005a 094B     		ldr	r3, .L7
- 123 005c 1B6C     		ldr	r3, [r3, #64]
- 124 005e 03F08053 		and	r3, r3, #268435456
- 125 0062 7B60     		str	r3, [r7, #4]
- 126 0064 7B68     		ldr	r3, [r7, #4]
- 127              	.LBE3:
+  92              		.loc 1 114 3 view .LVU11
+  93              	.LBB3:
+  94              		.loc 1 114 3 view .LVU12
+  95 0032 0020     		movs	r0, #0
+  96 0034 0190     		str	r0, [sp, #4]
+  97              		.loc 1 114 3 view .LVU13
+  98 0036 084B     		ldr	r3, .L7
+  99 0038 1A6C     		ldr	r2, [r3, #64]
+ 100 003a 42F08052 		orr	r2, r2, #268435456
+ 101 003e 1A64     		str	r2, [r3, #64]
+ 102              		.loc 1 114 3 view .LVU14
+ 103 0040 1B6C     		ldr	r3, [r3, #64]
+ 104 0042 03F08053 		and	r3, r3, #268435456
+ 105 0046 0193     		str	r3, [sp, #4]
+ 106              		.loc 1 114 3 view .LVU15
+ 107 0048 019B     		ldr	r3, [sp, #4]
+ 108              	.LBE3:
+ 109              		.loc 1 114 3 view .LVU16
  115:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Start the flash interface while System Run */
  116:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   CLEAR_BIT(PWR->CR, PWR_CR_FISSR);
- 128              		.loc 1 116 3
- 129 0066 074B     		ldr	r3, .L7+4
- 130 0068 1B68     		ldr	r3, [r3]
- 131 006a 064A     		ldr	r2, .L7+4
- 132 006c 23F40013 		bic	r3, r3, #2097152
- 133 0070 1360     		str	r3, [r2]
+ 110              		.loc 1 116 3 view .LVU17
+ 111 004a 044A     		ldr	r2, .L7+4
+ 112 004c 1368     		ldr	r3, [r2]
+ 113 004e 23F40013 		bic	r3, r3, #2097152
+ 114 0052 1360     		str	r3, [r2]
  117:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
+ARM GAS  /tmp/cclelYY6.s 			page 5
+
+
  118:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
- 134              		.loc 1 118 10
- 135 0072 0023     		movs	r3, #0
+ 115              		.loc 1 118 3 view .LVU18
  119:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
- 136              		.loc 1 119 1
- 137 0074 1846     		mov	r0, r3
- 138 0076 0C37     		adds	r7, r7, #12
- 139              	.LCFI9:
- 140              		.cfi_def_cfa_offset 4
- 141 0078 BD46     		mov	sp, r7
- 142              	.LCFI10:
- 143              		.cfi_def_cfa_register 13
- 144              		@ sp needed
- 145 007a 5DF8047B 		ldr	r7, [sp], #4
- 146              	.LCFI11:
- 147              		.cfi_restore 7
- 148              		.cfi_def_cfa_offset 0
- 149 007e 7047     		bx	lr
- 150              	.L8:
- 151              		.align	2
- 152              	.L7:
- 153 0080 00380240 		.word	1073887232
- 154 0084 00700040 		.word	1073770496
- 155              		.cfi_endproc
- 156              	.LFE131:
- 158              		.align	1
- 159              		.global	HAL_FLASHEx_EnableFlashSleepMode
- 160              		.syntax unified
- 161              		.thumb
- 162              		.thumb_func
- 163              		.fpu fpv4-sp-d16
- 165              	HAL_FLASHEx_EnableFlashSleepMode:
- 166              	.LFB132:
+ 116              		.loc 1 119 1 is_stmt 0 view .LVU19
+ 117 0054 02B0     		add	sp, sp, #8
+ 118              	.LCFI3:
+ 119              		.cfi_def_cfa_offset 0
+ 120              		@ sp needed
+ 121 0056 7047     		bx	lr
+ 122              	.L8:
+ 123              		.align	2
+ 124              	.L7:
+ 125 0058 00380240 		.word	1073887232
+ 126 005c 00700040 		.word	1073770496
+ 127              		.cfi_endproc
+ 128              	.LFE131:
+ 130              		.align	1
+ 131              		.global	HAL_FLASHEx_EnableFlashSleepMode
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu fpv4-sp-d16
+ 137              	HAL_FLASHEx_EnableFlashSleepMode:
+ 138              	.LFB132:
  120:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
  121:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
  122:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Enable the flash sleep while System Run
  123:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode is only available for STM32F41xxx/STM32F446xx devices. 
  124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @note  This mode could n't be set while executing with the flash itself. 
-ARM GAS  /tmp/cc5ulQpP.s 			page 6
-
-
  125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   *        It should be done with specific routine executed from RAM.     
  126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @retval HAL status
  127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
  128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_EnableFlashSleepMode(void)
  129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
- 167              		.loc 1 129 1
- 168              		.cfi_startproc
- 169              		@ args = 0, pretend = 0, frame = 8
- 170              		@ frame_needed = 1, uses_anonymous_args = 0
- 171              		@ link register save eliminated.
- 172 0088 80B4     		push	{r7}
- 173              	.LCFI12:
- 174              		.cfi_def_cfa_offset 4
- 175              		.cfi_offset 7, -4
- 176 008a 83B0     		sub	sp, sp, #12
- 177              	.LCFI13:
- 178              		.cfi_def_cfa_offset 16
- 179 008c 00AF     		add	r7, sp, #0
- 180              	.LCFI14:
- 181              		.cfi_def_cfa_register 7
- 182              	.LBB4:
+ 139              		.loc 1 129 1 is_stmt 1 view -0
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 8
+ 142              		@ frame_needed = 0, uses_anonymous_args = 0
+ 143              		@ link register save eliminated.
+ 144 0060 82B0     		sub	sp, sp, #8
+ 145              	.LCFI4:
+ 146              		.cfi_def_cfa_offset 8
  130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
  131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
- 183              		.loc 1 131 3
- 184 008e 0023     		movs	r3, #0
- 185 0090 7B60     		str	r3, [r7, #4]
- 186 0092 0C4B     		ldr	r3, .L11
- 187 0094 1B6C     		ldr	r3, [r3, #64]
- 188 0096 0B4A     		ldr	r2, .L11
- 189 0098 43F08053 		orr	r3, r3, #268435456
- 190 009c 1364     		str	r3, [r2, #64]
- 191 009e 094B     		ldr	r3, .L11
- 192 00a0 1B6C     		ldr	r3, [r3, #64]
- 193 00a2 03F08053 		and	r3, r3, #268435456
- 194 00a6 7B60     		str	r3, [r7, #4]
- 195 00a8 7B68     		ldr	r3, [r7, #4]
- 196              	.LBE4:
+ 147              		.loc 1 131 3 view .LVU21
+ 148              	.LBB4:
+ 149              		.loc 1 131 3 view .LVU22
+ 150 0062 0020     		movs	r0, #0
+ 151 0064 0190     		str	r0, [sp, #4]
+ 152              		.loc 1 131 3 view .LVU23
+ 153 0066 084B     		ldr	r3, .L11
+ 154 0068 1A6C     		ldr	r2, [r3, #64]
+ 155 006a 42F08052 		orr	r2, r2, #268435456
+ 156 006e 1A64     		str	r2, [r3, #64]
+ 157              		.loc 1 131 3 view .LVU24
+ 158 0070 1B6C     		ldr	r3, [r3, #64]
+ 159 0072 03F08053 		and	r3, r3, #268435456
+ARM GAS  /tmp/cclelYY6.s 			page 6
+
+
+ 160 0076 0193     		str	r3, [sp, #4]
+ 161              		.loc 1 131 3 view .LVU25
+ 162 0078 019B     		ldr	r3, [sp, #4]
+ 163              	.LBE4:
+ 164              		.loc 1 131 3 view .LVU26
  132:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable the flash sleep while System Run */
  133:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   SET_BIT(PWR->CR, PWR_CR_FMSSR);
- 197              		.loc 1 133 3
- 198 00aa 074B     		ldr	r3, .L11+4
- 199 00ac 1B68     		ldr	r3, [r3]
- 200 00ae 064A     		ldr	r2, .L11+4
- 201 00b0 43F48013 		orr	r3, r3, #1048576
- 202 00b4 1360     		str	r3, [r2]
+ 165              		.loc 1 133 3 view .LVU27
+ 166 007a 044A     		ldr	r2, .L11+4
+ 167 007c 1368     		ldr	r3, [r2]
+ 168 007e 43F48013 		orr	r3, r3, #1048576
+ 169 0082 1360     		str	r3, [r2]
  134:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
  135:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
- 203              		.loc 1 135 10
- 204 00b6 0023     		movs	r3, #0
+ 170              		.loc 1 135 3 view .LVU28
  136:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
- 205              		.loc 1 136 1
- 206 00b8 1846     		mov	r0, r3
- 207 00ba 0C37     		adds	r7, r7, #12
- 208              	.LCFI15:
- 209              		.cfi_def_cfa_offset 4
- 210 00bc BD46     		mov	sp, r7
- 211              	.LCFI16:
-ARM GAS  /tmp/cc5ulQpP.s 			page 7
-
-
- 212              		.cfi_def_cfa_register 13
- 213              		@ sp needed
- 214 00be 5DF8047B 		ldr	r7, [sp], #4
- 215              	.LCFI17:
- 216              		.cfi_restore 7
- 217              		.cfi_def_cfa_offset 0
- 218 00c2 7047     		bx	lr
- 219              	.L12:
- 220              		.align	2
- 221              	.L11:
- 222 00c4 00380240 		.word	1073887232
- 223 00c8 00700040 		.word	1073770496
- 224              		.cfi_endproc
- 225              	.LFE132:
- 227              		.align	1
- 228              		.global	HAL_FLASHEx_DisableFlashSleepMode
- 229              		.syntax unified
- 230              		.thumb
- 231              		.thumb_func
- 232              		.fpu fpv4-sp-d16
- 234              	HAL_FLASHEx_DisableFlashSleepMode:
- 235              	.LFB133:
+ 171              		.loc 1 136 1 is_stmt 0 view .LVU29
+ 172 0084 02B0     		add	sp, sp, #8
+ 173              	.LCFI5:
+ 174              		.cfi_def_cfa_offset 0
+ 175              		@ sp needed
+ 176 0086 7047     		bx	lr
+ 177              	.L12:
+ 178              		.align	2
+ 179              	.L11:
+ 180 0088 00380240 		.word	1073887232
+ 181 008c 00700040 		.word	1073770496
+ 182              		.cfi_endproc
+ 183              	.LFE132:
+ 185              		.align	1
+ 186              		.global	HAL_FLASHEx_DisableFlashSleepMode
+ 187              		.syntax unified
+ 188              		.thumb
+ 189              		.thumb_func
+ 190              		.fpu fpv4-sp-d16
+ 192              	HAL_FLASHEx_DisableFlashSleepMode:
+ 193              	.LFB133:
  137:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** 
  138:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** /**
  139:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   * @brief Disable the flash sleep while System Run
@@ -393,96 +348,82 @@ ARM GAS  /tmp/cc5ulQpP.s 			page 1
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   */
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_DisableFlashSleepMode(void)
  146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** {
- 236              		.loc 1 146 1
- 237              		.cfi_startproc
- 238              		@ args = 0, pretend = 0, frame = 8
- 239              		@ frame_needed = 1, uses_anonymous_args = 0
- 240              		@ link register save eliminated.
- 241 00cc 80B4     		push	{r7}
- 242              	.LCFI18:
- 243              		.cfi_def_cfa_offset 4
- 244              		.cfi_offset 7, -4
- 245 00ce 83B0     		sub	sp, sp, #12
- 246              	.LCFI19:
- 247              		.cfi_def_cfa_offset 16
- 248 00d0 00AF     		add	r7, sp, #0
- 249              	.LCFI20:
- 250              		.cfi_def_cfa_register 7
- 251              	.LBB5:
+ 194              		.loc 1 146 1 is_stmt 1 view -0
+ 195              		.cfi_startproc
+ 196              		@ args = 0, pretend = 0, frame = 8
+ 197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 198              		@ link register save eliminated.
+ 199 0090 82B0     		sub	sp, sp, #8
+ 200              	.LCFI6:
+ 201              		.cfi_def_cfa_offset 8
  147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Enable Power ctrl clock */
  148:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   __HAL_RCC_PWR_CLK_ENABLE();
- 252              		.loc 1 148 3
- 253 00d2 0023     		movs	r3, #0
- 254 00d4 7B60     		str	r3, [r7, #4]
- 255 00d6 0C4B     		ldr	r3, .L15
- 256 00d8 1B6C     		ldr	r3, [r3, #64]
- 257 00da 0B4A     		ldr	r2, .L15
- 258 00dc 43F08053 		orr	r3, r3, #268435456
-ARM GAS  /tmp/cc5ulQpP.s 			page 8
+ARM GAS  /tmp/cclelYY6.s 			page 7
 
 
- 259 00e0 1364     		str	r3, [r2, #64]
- 260 00e2 094B     		ldr	r3, .L15
- 261 00e4 1B6C     		ldr	r3, [r3, #64]
- 262 00e6 03F08053 		and	r3, r3, #268435456
- 263 00ea 7B60     		str	r3, [r7, #4]
- 264 00ec 7B68     		ldr	r3, [r7, #4]
- 265              	.LBE5:
+ 202              		.loc 1 148 3 view .LVU31
+ 203              	.LBB5:
+ 204              		.loc 1 148 3 view .LVU32
+ 205 0092 0020     		movs	r0, #0
+ 206 0094 0190     		str	r0, [sp, #4]
+ 207              		.loc 1 148 3 view .LVU33
+ 208 0096 084B     		ldr	r3, .L15
+ 209 0098 1A6C     		ldr	r2, [r3, #64]
+ 210 009a 42F08052 		orr	r2, r2, #268435456
+ 211 009e 1A64     		str	r2, [r3, #64]
+ 212              		.loc 1 148 3 view .LVU34
+ 213 00a0 1B6C     		ldr	r3, [r3, #64]
+ 214 00a2 03F08053 		and	r3, r3, #268435456
+ 215 00a6 0193     		str	r3, [sp, #4]
+ 216              		.loc 1 148 3 view .LVU35
+ 217 00a8 019B     		ldr	r3, [sp, #4]
+ 218              	.LBE5:
+ 219              		.loc 1 148 3 view .LVU36
  149:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   /* Disable the flash sleep while System Run */
  150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   CLEAR_BIT(PWR->CR, PWR_CR_FMSSR);
- 266              		.loc 1 150 3
- 267 00ee 074B     		ldr	r3, .L15+4
- 268 00f0 1B68     		ldr	r3, [r3]
- 269 00f2 064A     		ldr	r2, .L15+4
- 270 00f4 23F48013 		bic	r3, r3, #1048576
- 271 00f8 1360     		str	r3, [r2]
+ 220              		.loc 1 150 3 view .LVU37
+ 221 00aa 044A     		ldr	r2, .L15+4
+ 222 00ac 1368     		ldr	r3, [r2]
+ 223 00ae 23F48013 		bic	r3, r3, #1048576
+ 224 00b2 1360     		str	r3, [r2]
  151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   
  152:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c ****   return HAL_OK;
- 272              		.loc 1 152 10
- 273 00fa 0023     		movs	r3, #0
+ 225              		.loc 1 152 3 view .LVU38
  153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c **** }
- 274              		.loc 1 153 1
- 275 00fc 1846     		mov	r0, r3
- 276 00fe 0C37     		adds	r7, r7, #12
- 277              	.LCFI21:
- 278              		.cfi_def_cfa_offset 4
- 279 0100 BD46     		mov	sp, r7
- 280              	.LCFI22:
- 281              		.cfi_def_cfa_register 13
- 282              		@ sp needed
- 283 0102 5DF8047B 		ldr	r7, [sp], #4
- 284              	.LCFI23:
- 285              		.cfi_restore 7
- 286              		.cfi_def_cfa_offset 0
- 287 0106 7047     		bx	lr
- 288              	.L16:
- 289              		.align	2
- 290              	.L15:
- 291 0108 00380240 		.word	1073887232
- 292 010c 00700040 		.word	1073770496
- 293              		.cfi_endproc
- 294              	.LFE133:
- 296              		.text
- 297              	.Letext0:
- 298              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 299              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
- 300              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
-ARM GAS  /tmp/cc5ulQpP.s 			page 9
+ 226              		.loc 1 153 1 is_stmt 0 view .LVU39
+ 227 00b4 02B0     		add	sp, sp, #8
+ 228              	.LCFI7:
+ 229              		.cfi_def_cfa_offset 0
+ 230              		@ sp needed
+ 231 00b6 7047     		bx	lr
+ 232              	.L16:
+ 233              		.align	2
+ 234              	.L15:
+ 235 00b8 00380240 		.word	1073887232
+ 236 00bc 00700040 		.word	1073770496
+ 237              		.cfi_endproc
+ 238              	.LFE133:
+ 240              		.text
+ 241              	.Letext0:
+ 242              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 243              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 244              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ARM GAS  /tmp/cclelYY6.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_flash_ramfunc.c
-     /tmp/cc5ulQpP.s:18     .RamFunc:0000000000000000 $t
-     /tmp/cc5ulQpP.s:26     .RamFunc:0000000000000000 HAL_FLASHEx_StopFlashInterfaceClk
-     /tmp/cc5ulQpP.s:84     .RamFunc:000000000000003c $d
-     /tmp/cc5ulQpP.s:89     .RamFunc:0000000000000044 $t
-     /tmp/cc5ulQpP.s:96     .RamFunc:0000000000000044 HAL_FLASHEx_StartFlashInterfaceClk
-     /tmp/cc5ulQpP.s:153    .RamFunc:0000000000000080 $d
-     /tmp/cc5ulQpP.s:158    .RamFunc:0000000000000088 $t
-     /tmp/cc5ulQpP.s:165    .RamFunc:0000000000000088 HAL_FLASHEx_EnableFlashSleepMode
-     /tmp/cc5ulQpP.s:222    .RamFunc:00000000000000c4 $d
-     /tmp/cc5ulQpP.s:227    .RamFunc:00000000000000cc $t
-     /tmp/cc5ulQpP.s:234    .RamFunc:00000000000000cc HAL_FLASHEx_DisableFlashSleepMode
-     /tmp/cc5ulQpP.s:291    .RamFunc:0000000000000108 $d
+     /tmp/cclelYY6.s:18     .RamFunc:0000000000000000 $t
+     /tmp/cclelYY6.s:26     .RamFunc:0000000000000000 HAL_FLASHEx_StopFlashInterfaceClk
+     /tmp/cclelYY6.s:70     .RamFunc:0000000000000028 $d
+     /tmp/cclelYY6.s:75     .RamFunc:0000000000000030 $t
+     /tmp/cclelYY6.s:82     .RamFunc:0000000000000030 HAL_FLASHEx_StartFlashInterfaceClk
+     /tmp/cclelYY6.s:125    .RamFunc:0000000000000058 $d
+     /tmp/cclelYY6.s:130    .RamFunc:0000000000000060 $t
+     /tmp/cclelYY6.s:137    .RamFunc:0000000000000060 HAL_FLASHEx_EnableFlashSleepMode
+     /tmp/cclelYY6.s:180    .RamFunc:0000000000000088 $d
+     /tmp/cclelYY6.s:185    .RamFunc:0000000000000090 $t
+     /tmp/cclelYY6.s:192    .RamFunc:0000000000000090 HAL_FLASHEx_DisableFlashSleepMode
+     /tmp/cclelYY6.s:235    .RamFunc:00000000000000b8 $d
 
 NO UNDEFINED SYMBOLS

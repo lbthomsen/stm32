@@ -6,5 +6,6 @@
             "binaryPath": "/home/lth/src/stm32/bp_blink/build/bp_blink.elf",
             "binaryArgs": []
         }
-    ]
+    ],
+    "cortex-debug.variableUseNaturalFormat": true
 }
