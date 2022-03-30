@@ -12,21 +12,8 @@
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
-            "showDevDebugOutput": "both",
+            "showDevDebugOutput": "none",
             "servertype": "stutil"
-        }, 
-        {
-            "name": "GDB",
-            "type": "gdb",
-            "request": "launch",
-            "cwd": "${workspaceRoot}",
-            "target": "${workspaceRoot}/build/bb_blink.elf",
-            "gdbpath" : "/usr/bin/gdb-multiarch",
-            "autorun": [
-                "target remote localhost:3333",
-                "symbol-file ./build/bb_blink.elf",
-                "monitor reset"
-                ]
         }
     ]
 }
