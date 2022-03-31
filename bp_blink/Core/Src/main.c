@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2022 Lars Boegild Thomsen <lbthomsen@gmail.com>.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed under MIT,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/MIT
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2022 Lars Boegild Thomsen <lbthomsen@gmail.com>.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed under MIT,
+ * the "License"; You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at:
+ *                        opensource.org/licenses/MIT
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -58,11 +58,13 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN 0 */
 
 // Send printf to uart1
-int _write(int fd, char* ptr, int len) {
+int _write(int fd, char *ptr, int len)
+{
   HAL_StatusTypeDef hstatus;
 
-  if (fd == 1 || fd == 2) {
-    hstatus = HAL_UART_Transmit(&huart1, (uint8_t *) ptr, len, HAL_MAX_DELAY);
+  if (fd == 1 || fd == 2)
+  {
+    hstatus = HAL_UART_Transmit(&huart1, (uint8_t *)ptr, len, HAL_MAX_DELAY);
     if (hstatus == HAL_OK)
       return len;
     else
@@ -80,8 +82,6 @@ int _write(int fd, char* ptr, int len) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-   //for (uint32_t i = 0; i < 1000000; ++i) asm("NOP"); // Insane
-   //asm("NOP");
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -112,18 +112,27 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  uint32_t last_blink = 0, now = 0;
+  uint32_t last_blink = 0, last_tick = 0, now = 0;
 
   while (1)
   {
 
     now = HAL_GetTick();
 
-    if (now - last_blink >= 500) {
+    if (now - last_blink >= 500)
+    {
 
       HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
       last_blink = now;
+    }
+
+    if (now - last_tick >= 1000) 
+    {
+      
+      DBG("Tick %lu", now / 1000);
+
+      last_tick = now;
     }
 
     /* USER CODE END WHILE */
